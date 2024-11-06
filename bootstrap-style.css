@@ -1,0 +1,138 @@
+:root {
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+}
+
+body {
+    position: relative;
+    padding-top: 56px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--bs-primary), #0099ff);
+}
+
+.hero-image img {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--bs-primary);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--bs-primary);
+}
+
+/* Skill Cards */
+.skill-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.skill-card h4 {
+    color: var(--bs-primary);
+    margin-bottom: 1rem;
+}
+
+.skill-card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.skill-card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--bs-primary);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+}
+
+.timeline-item .card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Contact Section */
+.contact-info i {
+    color: var(--bs-primary);
+    margin-right: 10px;
+    width: 20px;
+}
+
+.contact-form .form-control {
+    border: 1px solid #dee2e6;
+    padding: 0.8rem;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Version Switcher */
+.version-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 0;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+    
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+} 

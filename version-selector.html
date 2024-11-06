@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom's Portfolio - Version Select</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --text-primary: #ffffff;
+            --accent: #00ff88;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .version-container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .version-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 800px;
+        }
+
+        .version-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .version-card h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .version-card p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="version-container">
+        <h1>Choose Portfolio Version</h1>
+        <div class="version-grid">
+            <a href="index.html" class="version-card">
+                <h2>Modern Dark</h2>
+                <p>Clean and minimalist design with smooth animations</p>
+            </a>
+            <a href="coder.html" class="version-card">
+                <h2>Developer Theme</h2>
+                <p>Code-focused design with terminal aesthetics</p>
+            </a>
+            <a href="bootstrap.html" class="version-card">
+                <h2>Bootstrap Theme</h2>
+                <p>Clean and professional design using Bootstrap framework</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
